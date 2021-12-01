@@ -15,8 +15,9 @@ public class StreamFilter {
         return words.stream().filter(word -> word.charAt(word.length() -1 ) == 's').collect(Collectors.toList());
     }
 
-    public List<Integer> getCommonElements(List<Integer> numbers, List<Integer> anotherNumbers) {
-        return null;
+    public List<Integer> getCommonElements(List<Integer> numbers, List<Integer> anotherNumbers)
+    {
+        return numbers.stream().filter(number -> anotherNumbers.contains(number)).collect(Collectors.toList());
     }
 
 
